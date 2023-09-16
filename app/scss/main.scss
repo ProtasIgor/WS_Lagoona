@@ -1,0 +1,922 @@
+@charset 'utf-8';
+
+@import '_fonts.scss';
+@import '_vars.scss';
+@import '_mixins.scss';
+
+.body {
+    background-color: $background-color-page;
+}
+
+.logo {
+    width: 266px;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.header {
+    margin-top: 30px;
+    margin-bottom: 70px;
+
+    &__inner {
+        @include section-inner;
+    }
+
+    &__head {
+        margin-bottom: 47px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        flex-basis: 266px;
+        margin-right: 40px;
+    }
+
+    &__logo-link {
+        display: block;
+        outline: none;
+    }
+
+    &__info {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__phone-contact {
+        padding: 10px;
+        border-radius: 10px;
+        font-family: 'Muller-Trial-Medium';
+        font-size: 20px;
+        line-height: 20px;
+        color: #666666;
+        text-decoration: none;
+    }
+
+    &__phone-contact:hover {
+        color: $color-link-hover;
+    }
+
+    &__phone-contact:focus {
+        color: $color-link-focus;
+        outline: 1px solid $color-link-focus;
+    }
+
+    &__phone-contact:active {
+        color: $color-link-active;
+    }
+
+    &__personal-area-pointer {
+        margin-right: 5px;
+        width: 21px;
+        height: 12px;
+    }
+
+    &__personal-area-link {
+        padding: .5em .7em;
+        font-family: 'Muller-Trial-Regular';
+        font-size: 16px;
+        line-height: 16px;
+        color: $color-button-default;
+        text-decoration: none;
+        transition: all .3s;
+        border: 1px solid transparent;
+        outline: none;
+    }
+
+    &__personal-area-link:hover {
+        color: #F0BF5F;
+        transition: color .3s;
+    }
+
+    &__personal-area-link:focus {
+        color: #CC9933;
+        border-color: #CC9933;
+        transition: all .3s;
+    }
+
+    &__personal-area-link:active {
+        color: #A47312;
+        transition: color .3s;
+    }
+
+    &__nav {
+        padding: 0 27px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: #FFF;
+        border-radius: 15px;
+
+        &-list {
+            display: flex;
+        }
+
+        &-link {
+            display: block;
+            padding: 27px;
+            font-size: 16px;
+            line-height: 16px;
+            text-decoration: none;
+            color: $color-link-default;
+            font-family: 'Muller-Trial-Regular';
+            cursor: pointer;
+            outline: none;
+            border: 1px solid transparent;
+            background-color: transparent;
+        }
+
+        &-link:hover {
+            color: $color-link-hover;
+        }
+
+        &-link:focus {
+            color: $color-link-focus;
+            outline: 1px solid $color-link-focus;
+        }
+
+        &-link:active {
+            color: $color-link-active;
+        }
+    }
+
+    &__button {
+        padding: 13px 20px;
+        color: $color-button-default;
+        font-family: "Muller-Trial-Regular";
+        font-size: 16px;
+        line-height: 16px;
+        border: 1px solid $color-button-default;
+        border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+        background-color: transparent;
+    }
+
+    &__button:hover {
+        color: $color-button-hover;
+        background-color: $background-color-button-hover;
+    }
+
+    &__button:focus {
+        color: $color-button-focus;
+        background-color: $background-color-button-focus;
+        outline: none;
+    }
+
+    &__button:active {
+        color: $color-button-active;
+        background-color: $background-color-button-active;
+    }
+
+    &__button:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+.specialoffer {
+    margin-bottom: 70px;
+
+    &__inner {
+        @include section-inner;
+    }
+
+    &__title {
+        @include section-title;
+    }
+
+    &__list {
+        min-height: 540px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 24px;
+        grid-auto-flow: column;
+    }
+
+    &__item {
+        display: grid;
+    }
+
+    &__item>* {
+        grid-area: 1/2;
+    }
+
+    &__item-picture>* {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+
+    &__item--largest {
+        grid-row: 1/3;
+        grid-column: 2/3;
+    }
+
+    &__item-content {
+        padding-left: 45px;
+        border-radius: 15px;
+    }
+
+    &__item-content:hover,
+    &__item-content:focus,
+    &__item-content:active {
+        background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%);
+    }
+
+    &__item-subtitle {
+        margin-top: 40px;
+        margin-bottom: 15px;
+        width: 420px;
+        max-width: 100%;
+        font-family: 'Muller-Trial-Bold';
+        font-size: 40px;
+        line-height: 40px;
+        color: #FFF;
+    }
+
+    &__item-price {
+        margin-bottom: 47px;
+        font-family: 'Muller-Trial-Regular';
+        font-size: 20px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    &__item-button {
+        color: $color-button-default;
+        background-color: transparent;
+        border: none;
+        font-family: "Muller-Trial-Regular";
+        font-size: 16px;
+        outline: none;
+    }
+
+    &__item-btn-pointer {
+        width: 18px;
+        height: 18px;
+        transition: margin-left .3s;
+        vertical-align: middle;
+        fill: rgba($color: #000000, $alpha: 0);
+        stroke: $color-button-default;
+    }
+
+    &__item-button:hover+&__item-btn-pointer {
+        margin-left: 11px;
+        transition: margin-left .3s;
+    }
+
+    &__item-button:active {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    &__item-button:active+.specialoffer__item-btn-pointer {
+        stroke: rgba(255, 255, 255, 1);
+    }
+
+    &__item-subtitle--largest {
+        margin-top: 212px;
+        width: 300px;
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    &__item-subtitle--largest+.specialoffer__item-price {
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+
+.about {
+    margin-bottom: 70px;
+
+    &__inner {
+        @include section-inner;
+    }
+
+    &__title {
+        @include section-title;
+    }
+
+    &__text {
+        width: 888px;
+        max-width: 100%;
+        color: $color-text-main;
+        line-height: 32px;
+        font-family: 'Muller-Trial-Regular';
+    }
+}
+
+.service {
+    margin-bottom: 70px;
+
+    &__inner {
+        @include section-inner;
+    }
+
+    &__title {
+        @include section-title;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-auto-flow: row;
+        gap: 24px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        background-color: #FFF;
+        border-radius: 15px;
+    }
+
+    &__item-picture {
+        margin-bottom: 26px;
+    }
+
+    &__item-picture>* {
+        width: 100%;
+        min-height: 165px;
+        object-fit: cover;
+        object-position: center;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    &__content {
+        padding: 0 10px 0 45px;
+        width: 400px;
+        max-width: 100%;
+    }
+
+    &__item-button {
+        font-family: 'Muller-Trial-Medium';
+        font-size: 20px;
+        line-height: 40px;
+        color: $color-button-default;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    &__item-button:hover {
+        color: #F0BF5F;
+    }
+
+    &__item-button:hover+&__item-btn-pointer {
+        stroke: #F0BF5F;
+        margin-left: 11px;
+        transition: margin-left .3s;
+    }
+
+    &__item-button:focus+&__item-btn-pointer {
+        margin-left: 11px;
+        transition: margin-left .3s;
+    }
+
+    &__item-button:active {
+        color: #A47312;
+    }
+
+    &__item-button:active+&__item-btn-pointer {
+        stroke: #A47312;
+    }
+
+    &__item-btn-pointer {
+        padding-bottom: 4px;
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
+        transition: margin-left .3s;
+        fill: rgba($color: #000000, $alpha: 0);
+        stroke: $color-button-default;
+    }
+
+    &__item-text {
+        font-family: "Muller-Trial-Regular";
+        margin-bottom: 35px;
+        color: $color-text-main;
+        font-size: 16px;
+        line-height: 32px;
+    }
+}
+
+.advantage {
+    margin-bottom: 70px;
+
+    &__inner {
+        @include section-inner;
+    }
+
+    &__title {
+        @include section-title;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, minmax(276px, auto));
+        justify-content: space-between;
+        align-content: space-between;
+        gap: 22px;
+    }
+
+    &__item {
+        padding: 40px 0 30px 45px;
+        display: flex;
+        flex-direction: column;
+        background-color: #FFF;
+        border-radius: 15px;
+    }
+
+    &__item-svg {
+        margin-bottom: 10px;
+        width: 64px;
+        height: 64px;
+    }
+
+    &__item-text {
+        width: 190px;
+        max-width: 100%;
+        font-family: "Muller-Trial-Regular";
+        font-size: 16px;
+        line-height: 32px;
+        color: $color-text-main;
+    }
+}
+
+.accommodation {
+    margin-bottom: 70px;
+
+    &__inner {
+        @include section-inner;
+    }
+
+    &__title {
+        @include section-title;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-auto-flow: row;
+        gap: 24px;
+    }
+
+    &__item {
+        background-color: #FFF;
+        border-radius: 25px;
+    }
+
+    &__item--largest {
+        display: grid;
+    }
+
+    &__item--largest>* {
+        grid-area: 1/-1;
+    }
+
+    &__item--largest>&__item-content {
+        padding: 0;
+        margin-bottom: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+
+
+    &__item-picture {
+        max-height: 217px;
+        display: block;
+    }
+
+    &__item-picture>* {
+        width: 100%;
+        height: inherit;
+        max-height: inherit;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        object-fit: cover;
+        object-position: center;
+
+    }
+
+    &__item--largest>&__item-picture {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    &__item--largest>&__item-picture>* {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    &__item-content {
+        padding: 32px 45px 45px;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    &__item-content>.service__item-button {
+        color: #FFF;
+    }
+
+    &__item-content>.service__item-btn-pointer {
+        padding-bottom: 10px;
+        stroke: #FFF;
+        vertical-align: middle;
+    }
+
+    &__item-content:hover>.service__item-button {
+        color: #F0BF5F;
+    }
+
+    &__item-content:active>.service__item-button {
+        color: $color-link-active;
+    }
+
+    &__item-content>&__item-price {
+        margin-bottom: 16px;
+        display: inline-block;
+        font-family: 'Muller-Trial-Bold';
+        font-size: 20px;
+        line-height: 20px;
+        color: $color-text-main;
+    }
+
+    &__item-price::before {
+        margin-right: 4px;
+        content: "от";
+        color: $color-text-alternate;
+        font-family: "Muller-Trial-Regular";
+    }
+
+    &__item-price:after {
+        content: "\/ ночь";
+        margin-left: 4px;
+        color: $color-text-main;
+        font-family: "Muller-Trial-Regular";
+        font-size: 16px;
+    }
+
+    &__item-stars {
+        margin-left: 25px;
+        width: 100%;
+        max-width: 100px;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+
+    &__item-star {
+        width: 14px;
+        height: 14px;
+        vertical-align: middle;
+        fill: $color-star-active;
+        color: $color-star-offset;
+    }
+
+    &__item-text {
+        margin-bottom: 16px;
+        font-family: "Muller-Trial-Regular";
+        color: $color-text-main;
+    }
+
+    &__item-destination {
+        margin-bottom: 16px;
+        font-family: "Muller-Trial-Regular";
+        color: $color-text-alternate;
+    }
+
+    &__item-button {
+        font-family: "Muller-Trial-Regular";
+        padding: 13px 20px;
+        color: $color-button-default;
+        border: 1px solid $color-button-default;
+        background-color: transparent;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    &__item-button:hover {
+        color: $color-button-hover;
+        background-color: $background-color-button-hover;
+    }
+
+    &__item-button:focus {
+        color: $color-button-focus;
+        background-color: $background-color-button-focus;
+    }
+
+    &__item-button:active {
+        color: $color-button-active;
+        background-color: $background-color-button-active;
+    }
+}
+
+.order {
+    margin-bottom: 70px;
+
+    &__inner {
+        @include section-inner;
+        padding: 45px;
+        box-sizing: border-box;
+        background-color: #E9E9E9;
+        border-radius: 15px;
+    }
+
+    &__title {
+        @include section-title;
+    }
+
+    &__form-list {
+        padding: 32px 28px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #FFF;
+        border-radius: 15px;
+    }
+
+    &__form-item {
+        width: 169px;
+        max-width: 100%;
+    }
+
+    &__form-item--submit {
+        max-width: min-content;
+    }
+
+    .form__label {
+        padding-bottom: 15px;
+        max-width: min-content;
+        font-family: "Muller-Trial-Regular";
+        font-size: 12px;
+        line-height: 12px;
+        color: $color-text-main;
+    }
+
+    .form__list {
+        max-width: 100%;
+    }
+
+    .form__submit {
+        padding: 13px 30px;
+    }
+}
+
+.contact {
+    margin-bottom: 70px;
+
+    &__inner {
+        @include section-inner;
+
+    }
+
+    &__title {
+        @include section-title;
+    }
+
+    &__box {
+        padding: 45px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info {
+        margin-right: 45px;
+    }
+
+    &__info-list {
+        margin-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info-item {
+        padding: 25px 0;
+        width: 375px;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px solid #E9E9E9;
+    }
+
+    &__info-item:nth-child(1) {
+        padding: 0;
+        padding-bottom: 25px;
+    }
+
+    &__info-title {
+        font-family: 'Muller-Trial-Bold';
+        font-size: 20px;
+        line-height: 20px;
+        color: $color-text-main;
+    }
+
+    &__info-description {
+        width: 230px;
+        max-width: 100%;
+    }
+
+    &__address {
+        font-family: "Muller-Trial-Regular";
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-text-main;
+    }
+
+    &__phone,
+    &__mail {
+        display: block;
+        font-family: "Muller-Trial-Regular", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-button-default;
+        text-decoration: none;
+        outline: none;
+    }
+
+    &__phone:hover,
+    &__mail:hover {
+        color: $color-link-active;
+        transition: color .3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &__phone:focus,
+    &__mail:focus {
+        color: $color-link-active;
+        transition: color .3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &__phone:active,
+    &__mail:active {
+        color: #FFF;
+        transition: color .3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &__mail:nth-child(1):after,
+    &__mail:nth-child(2):after {
+        display: block;
+        content: "по вопросам бронирования";
+        font-family: "Muller-Trial-Regular";
+        font-size: 16px;
+        line-height: 24px;
+        color: #999999;
+        text-decoration: none;
+    }
+
+    &__mail:nth-child(2):after {
+        content: "по вопросам сотрудничества";
+    }
+
+    &__picture {
+        box-sizing: border-box;
+        align-self: stretch;
+        flex-grow: 1;
+    }
+
+    &__image>* {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 15px;
+    }
+
+    &__info-button {
+        padding: 27px 29px;
+    }
+}
+
+.footer {
+    &__inner {
+        @include section-inner;
+        position: relative;
+        padding: 45px;
+        box-sizing: border-box;
+        background-color: #333;
+        border-radius: 15px;
+    }
+
+    &__title {
+        @include section-title;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 300px 1fr 360px 2fr 25px;
+    }
+
+    &__description-p {
+        margin-bottom: 37px;
+        font-family: "Muller-Trial-Regular";
+        font-size: 16px;
+        line-height: 30px;
+        color: #FFF;
+    }
+
+    &__description-button {
+        padding: 0.5em;
+        font-family: "Muller-Trial-Regular";
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-button-default;
+        outline: none;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        background-color: transparent;
+    }
+
+    &__description-button:hover {
+        color: $color-button-hover;
+    }
+
+    &__description-button:focus {
+        color: $color-button-focus;
+        border: 1px solid $color-button-focus;
+        transform: border .3s;
+    }
+
+    &__description-button:active {
+        color: $color-button-active;
+    }
+
+    &__address {
+        margin-bottom: 15px;
+    }
+
+    &__phone {
+        margin-bottom: 15px;
+    }
+
+    &__social-item {
+        fill: #999999;
+        margin-bottom: 20px;
+        transition: all .3s;
+    }
+
+    &__social-item * {
+        width: 25px;
+        height: 25px;
+    }
+
+    &__social-item:hover,
+    &__social-link:focus,
+    &__social-item:active {
+        transition: all .3s;
+    }
+
+    &__social-item:hover {
+        fill: $color-link-hover;
+    }
+
+    &__social-link:focus {
+        fill: $color-link-focus;
+    }
+
+    &__social-link:active {
+        fill: $color-link-active;
+    }
+
+    &__social-link {
+        outline: none;
+        fill: inherit;
+    }
+
+    &__picture {
+        position: absolute;
+        bottom: 0px;
+        left: 60%;
+    }
+
+    &__picture>* {
+        width: 255px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    &__picture>source {
+        line-height: 0;
+        font-size: 0;
+    }
+}
+
+@import '_media.scss';

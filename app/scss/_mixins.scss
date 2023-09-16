@@ -1,0 +1,25 @@
+@mixin section-inner {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+@mixin link {
+    color: $link-color-default;
+}
+
+@mixin section-title {
+    margin: 0 0 20px 40px;
+    font-size: 40px;
+    font-family: "Muller-Trial-Regular";
+    font-weight: 200;
+    color: $color-text-title;
+
+    @media (max-width: 600px) {
+        font-size: 27px;
+    }
+
+    @media (max-width: 420px) {
+        margin-left: 20px;
+        font-size: 24px;
+    }
+}

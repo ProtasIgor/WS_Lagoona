@@ -1,0 +1,607 @@
+@media (max-width: 1200px) {
+    .header {
+
+        &__nav-link {
+            padding: 27px 10px;
+        }
+    }
+
+    .about {
+        &__text {
+            padding: 0 1em;
+        }
+    }
+
+    .service {
+        &__content {
+            padding-left: 30px;
+            width: auto;
+        }
+
+        &__box {
+            padding: 0 1em;
+        }
+
+        &__item-text {
+            width: 70%;
+        }
+    }
+
+    .advantage {
+        &__box {
+            padding: 0 1em;
+        }
+
+        &__item {
+            padding: 30px 10px 20px 15px;
+        }
+    }
+
+    .accommodation {
+        &__box {
+            padding: 0 1em;
+        }
+
+        &__list {
+            grid-template-columns: repeat(2, minmax(auto, 374px));
+            grid-template-rows: repeat(5, minmax(450px, auto));
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .header {
+        &__nav {
+            padding: 27px;
+            flex-direction: column;
+        }
+
+        &__nav-list {
+            margin-bottom: 10px;
+        }
+
+        &__nav-link {
+            padding: 27px;
+        }
+    }
+
+    .specialoffer {
+        &__list {
+            grid-template-columns: 80%;
+            grid-template-rows: repeat(4, auto);
+            justify-content: center;
+        }
+
+        &__item {
+            width: 100%;
+        }
+
+        &__item>* {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+
+        &__item-picture {
+            width: 100%;
+        }
+
+        &__item--largest {
+            grid-column: 1/2;
+            grid-row: 3/5;
+        }
+    }
+
+    .about {
+        &__text {
+            margin: 0 auto;
+            width: 600px;
+        }
+    }
+
+    .service {
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item {
+            width: 80%;
+        }
+    }
+
+    .advantage {
+        &__list {
+            grid-template-columns: repeat(2, minmax(230px, auto));
+            grid-template-rows: repeat(4, minmax(276px, auto));
+            justify-content: center;
+        }
+    }
+
+    .contact {
+        &__box {
+            flex-direction: column-reverse;
+            justify-content: start;
+        }
+
+        &__info {
+            margin-right: 0;
+        }
+
+        &__picture {
+            margin-bottom: 20px;
+            height: 400px;
+        }
+
+        &__image {
+            height: 100%;
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 830px) {
+    .header {
+        &__nav-link {
+            padding: 10px;
+        }
+    }
+
+    .accommodation {
+
+        &__list {
+            grid-template-columns: repeat(1, minmax(auto, 600px));
+            grid-template-rows: repeat(8, minmax(450px, auto));
+        }
+    }
+
+    .footer {
+        &__content {
+            grid-template-columns: 300px 1fr 25px;
+            grid-template-rows: repeat(2, minmax(200px, auto));
+        }
+
+        &__contact {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        &__social {
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+
+        &__picture {
+            left: 50%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        &__logo {
+            display: none;
+        }
+
+        &__phone-contact:hover {
+            color: #666;
+            outline: none;
+        }
+
+        &__phone-contact:focus {
+            color: #666;
+            outline: none;
+        }
+
+        &__personal-area-link {
+            border: none;
+        }
+
+        &__personal-area-link:focus {
+            border: none;
+        }
+
+        &__nav-link:hover {
+            color: #666;
+        }
+
+        &__nav-link:focus {
+            color: #666;
+            outline: none;
+        }
+
+        &__button:hover,
+        &__button:focus,
+        &__button:active {
+            color: #c93;
+            background-color: #fff;
+        }
+    }
+
+    .specialoffer {
+
+
+        &__item-subtitle {
+            width: auto;
+            font-size: 30px;
+        }
+
+        &__item-price {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        &__item-picture>* {
+            object-fit: cover;
+        }
+
+        &__item-button:hover+&__item-btn-pointer {
+            margin-left: 0px;
+            transition: all 0s;
+        }
+
+        &__item-button:active {
+            color: #c93;
+        }
+
+        &__item-button:active+.specialoffer__item-btn-pointer {
+            stroke: #c93;
+        }
+    }
+
+    .about {
+        &__text {
+            font-size: 16px;
+            width: 400px;
+        }
+    }
+
+    .service {
+
+        &__item-button:hover {
+            color: #c93;
+        }
+
+        &__item-button:hover+&__item-btn-pointer {
+            color: #c93;
+            margin-left: 0px;
+            transition: margin-left .0s;
+        }
+
+        &__item-button:focus+&__item-btn-pointer {
+            margin-left: 0px;
+            transition: margin-left 0s;
+        }
+
+        &__item-button:active {
+            color: #c93;
+        }
+
+        &__item-button:active+&__item-btn-pointer {
+            stroke: #c93;
+        }
+    }
+
+    .accommodation {
+        .service__item-btn-pointer {
+            stroke: #FFF;
+        }
+
+        &__item-content>.service__item-button+.service__item-btn-pointer {
+            stroke: #FFF;
+        }
+
+        &__item-content:hover>.service__item-button {
+            color: #FFF;
+        }
+
+        &__item-content:active>.service__item-button {
+            color: #FFF;
+        }
+
+        &__item-content:focus>.service__item-button+.service__item-btn-pointer {
+            stroke: #FFF;
+        }
+
+        &__item-content:active>.service__item-button+.service__item-btn-pointer {
+            stroke: #FFF;
+        }
+
+        &__item-button:hover {
+            color: #c93;
+            background-color: #FFF;
+        }
+
+        &__item-button:focus {
+            color: #c93;
+            background-color: #FFF;
+        }
+
+        &__item-button:active {
+            color: #c93;
+            background-color: #FFF;
+        }
+    }
+
+    .contact {
+
+        &__phone:hover,
+        &__mail:hover {
+            color: #c93;
+            transition: color 0s;
+        }
+
+        &__phone:focus,
+        &__mail:focus {
+            color: #c93;
+            transition: color 0s;
+        }
+
+        &__phone:active,
+        &__mail:active {
+            color: #c93;
+            transition: color 0s;
+        }
+    }
+
+    .footer {
+        &__description-button:hover {
+            color: #c93;
+        }
+
+        &__description-button:focus {
+            color: #c93;
+            border: 1px solid transparent;
+            transform: border 0s;
+        }
+
+        &__description-button:active {
+            color: #c93;
+        }
+
+        &__social-link:focus {
+            fill: inherit;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        &__nav-list {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .specialoffer {
+
+        &__item-content {
+            padding-left: 20px;
+            padding-bottom: 10px;
+        }
+
+        &__item-subtitle {
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        &__item-price {
+            font-size: 16px;
+        }
+
+        &__item-button {
+            font-size: 10px;
+        }
+
+        &__item-btn-pointer {
+            width: 10px;
+            height: 11px;
+        }
+    }
+
+    .specialoffer__item--largest .specialoffer__item-price {
+        font-size: 16px;
+    }
+
+    .about {
+        &__text {
+            line-height: 22px;
+            width: 80%;
+        }
+    }
+
+    .service {
+        &__item-button {
+            font-size: 13px;
+            line-height: 26px;
+        }
+
+        &__item-text {
+            font-size: 12px;
+            line-height: 24px;
+        }
+
+        &__item-btn-pointer {
+            padding-bottom: 0;
+            width: 14px;
+            height: 15px;
+
+        }
+    }
+
+    .advantage {
+        &__list {
+            grid-template-columns: repeat(1, minmax(230px, auto));
+            grid-template-rows: repeat(8, minmax(276px, auto));
+        }
+    }
+
+    .accommodation {
+        &__item-content>.service__item-btn-pointer {
+            padding-bottom: 6px;
+        }
+    }
+
+    .contact {
+        &__info-item {
+            padding: 15px 0;
+        }
+
+        &__picture {
+            height: 300px;
+        }
+
+        &__info {
+            max-width: 100%;
+        }
+
+        &__info-title {
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        &__address {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        &__phone,
+        &__mail {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        &__mail:nth-child(1):after,
+        &__mail:nth-child(2):after {
+            font-size: 10px;
+        }
+
+        &__info-button {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .footer {
+        &__inner {
+            padding-bottom: 0;
+        }
+
+        &__description-p {
+            margin-bottom: 24px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        &__description-button {
+            font-size: 12px;
+        }
+
+        &__picture>* {
+            width: 160px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .header {
+        margin-top: 10px;
+
+        &__info {
+            flex-direction: column;
+        }
+
+        &__phone-contact {
+            margin-bottom: 10px;
+        }
+
+        &__button {
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__button:not(:last-child) {
+            margin-right: auto;
+            margin-bottom: 10px;
+        }
+    }
+
+    .specialoffer {
+
+        &__item-picture>* {
+            object-fit: cover;
+        }
+    }
+
+    .service {
+        &__content {
+            padding-left: 10px;
+        }
+
+        &__item-button {
+            font-size: 10px;
+            line-height: 20px;
+        }
+
+        &__item-btn-pointer {
+            width: 9px;
+            height: 10px;
+        }
+    }
+
+    .accommodation {
+        &__list {
+            grid-template-columns: repeat(1, minmax(auto, 300px));
+            grid-template-rows: repeat(8, minmax(300px, auto));
+        }
+
+        &__item-content {
+            padding: 25px 25px 10px;
+        }
+
+        &__item-stars {
+            margin-left: 15px;
+            width: 100%;
+            max-width: 70px;
+        }
+
+        &__item-star {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    .contact {
+        &__picture {
+            height: 150px;
+        }
+
+        &__info-item {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__info-description {
+            text-align: center;
+        }
+
+        &__info-title {
+            margin-bottom: 10px;
+        }
+    }
+
+    .footer {
+        &__inner {
+            padding: 25px 25px 0;
+        }
+
+        &__content {
+            grid-template-columns: 200px 1fr 25px;
+        }
+
+        &__picture {
+            display: none;
+        }
+    }
+}
