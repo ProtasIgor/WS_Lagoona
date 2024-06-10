@@ -4,7 +4,7 @@
 
 ## Open in browser
 
-[Lagoona](https://protasigor.github.io/Lagoona/dist)
+[Lagoona](https://protasigor.github.io/WS_Lagoona/dist)
 
 ## Layout
 
